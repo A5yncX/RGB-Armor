@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>护甲染色计算器</title>
+</head>
+<style type="text/css">
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+    out{text-align: center;}
+</style>
+
+<script type="text/javascript">
+    function rgb() {
+        //获取rgb数值
+        var r = document.getElementById("red").value;
+        var g = document.getElementById("green").value;
+        var b = document.getElementById("blue").value;
+        // 计算最小值
+        var minnum = Math.min(r, g, b);
+        // 进行等比缩小并取整
+        r = Math.round(r / minnum);
+        g = Math.round(g / minnum);
+        b = Math.round(b / minnum);
+        // 输出
+        document.getElementById("redout").innerHTML = r;
+        document.getElementById("greenout").innerHTML = g;
+        document.getElementById("blueout").innerHTML = b;
+
+    }
+</script>
+
+<body style="background-color: #ebeee8;">
+    <h1 style="text-align: center;">RGB-Armor</h1>
+    <p style="text-align: center;">输入每日幸运色(R,G,B)<br>
+        R<input type="number" id="red" value="" /><br>
+        G<input type="number" id="green" value="" /><br>
+        B<input type="number" id="blue" value="" /><br>
+        <button onclick="rgb()">计算</button>
+    </p>
+    <div id="out">
+        <div style="text-align: center;">红色染料<p id="redout"></p></div>
+        <div style="text-align: center;">绿色染料<p id="greenout"></p></div>
+        <div style="text-align: center;">蓝色染料<p id="blueout"></p></div>
+    </div>
+</body>
+
+</html>

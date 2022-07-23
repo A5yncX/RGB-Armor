@@ -4,5 +4,36 @@
 <body>
     <h1 style="text-align: center;">RGB-Armor</h1>
     <p style="text-align: center;">输入每日幸运色计算所需染料</p>
+<div class="RGB">
+    <!-- <p><input id="r" onkeyup="convert('R')"> R</p>
+    <p><input id="g" onkeyup="convert('G')"> G</p>
+    <p><input id="b" onkeyup="convert('B')"> B</p> -->
+    <p><input id="r"> R</p>
+    <p><input id="g"> G</p>
+    <p><input id="b"> B</p>
+    <button type="button" onclick='coculate()'>计算</button>
+</div>
+<div class="FINALRGB">
+    所需数量
+    <p id="finalr">r</p>
+    <p id="finalg">g</p>
+    <p id="finalb">b</p>
+    
+    <!-- 用Math.round()，结果作为整数返回。 -->
+    <script>
+        function coculate() {
+            var r = document.getElementById("r");
+            var g = document.getElementById("g");
+            var b = document.getElementById("b");
+            var min = r < g ? (r < b ? r : b)  : (g < b ? g : b);
+            r = r / min;
+            g = g / min;
+            b = b / min;
+            document.getElementById("finalr").innerHTML = Math.round(r);
+            document.getElementById("finalg").innerHTML = Math.round(g);
+            document.getElementById("finalb").innerHTML = Math.round(b);
+        }
+    </script>
+</div>
 
 </body>
