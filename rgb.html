@@ -4,17 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>护甲染色计算器</title>
+    <title>幸运色皮革染色计算器</title>
 </head>
 <style type="text/css">
     h1 {
         text-align: center;
     }
+    h2 {
+        text-align: center;
+        font-size: 10px;
+        color: #858585;
+    }
 
     p {
         text-align: center;
     }
-    out{text-align: center;}
+    
+	* {
+		margin: 5px auto;
+		padding: 5px;
+		background-color: #ebeee8;
+		text-align: center;
+		font-size: auto;
+	}
+
+	.coculate {
+		width: 100%;
+        padding: 5px;
+		margin: 5px auto;
+	}
+
+	.output {
+		height: 100px;
+		width: 30%;
+		margin-left: 2.5%;
+		margin-top: 5px;
+		float: left;
+		border: 1px solid rgb(0, 0, 0);
+	}
+    .out {
+		height: 45px;
+		width: 30%;
+		margin-left: 2%;
+		margin-top: 3px;
+		float: left;
+		border: 1px solid rgb(0, 0, 0,0);
+        font-size: 40px;
+	}
 </style>
 
 <script type="text/javascript">
@@ -37,18 +73,19 @@
     }
 </script>
 
-<body style="background-color: #ebeee8;">
-    <h1 style="text-align: center;">RGB-Armor</h1>
-    <p style="text-align: center;">输入每日幸运色(R,G,B)<br>
-        R<input type="number" id="red" value="" /><br>
-        G<input type="number" id="green" value="" /><br>
-        B<input type="number" id="blue" value="" /><br>
+<body>
+    <h1 style="text-align: center;">幸运色皮革染色计算器</h1>
+    <h2>by:Zizi_y AsyncX_</h2>
+    <div id="coculate">输入每日幸运色(R,G,B)<br>
+        R  <input type="number" id="red" value="" /><br>
+        G  <input type="number" id="green" value="" /><br>
+        B  <input type="number" id="blue" value="" /><br>
         <button onclick="rgb()">计算</button>
-    </p>
-    <div id="out">
-        <div style="text-align: center;">红色染料<p id="redout"></p></div>
-        <div style="text-align: center;">绿色染料<p id="greenout"></p></div>
-        <div style="text-align: center;">蓝色染料<p id="blueout"></p></div>
+    </div>
+    <div id="output">
+        <div class="out"><img src="img/Red_Dye.png" style="height: 80px"><p id="redout"></p></div>
+        <div class="out"><img src="img/Green_Dye.png" style="height: 80px"><p id="greenout"></p></div>
+        <div class="out"><img src="img/Blue_Dye.png" style="height: 80px"><p id="blueout"></p></div>
     </div>
 </body>
 
